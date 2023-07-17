@@ -2,10 +2,6 @@ const { Router } = require("express");
 const { NotesModel } = require("../models/notesModel");
 const notesRouter = Router();
 
-notesRouter.get("/", (req, res) => {
-  res.status(200).send("Welcome to notes-routes home page!!!");
-});
-
 notesRouter.post("/add", async (req, res) => {
   try {
     const { title, content } = req.body;

@@ -6,9 +6,7 @@ const { BlackListModel } = require("../models/blackListModel");
 const userRouter = Router();
 require("dotenv").config();
 const secretKey = process.env.secretKey;
-userRouter.get("/", (req, res) => {
-  res.status(200).send("Welcome to user routes home page!!!");
-});
+
 
 userRouter.post("/create", async (req, res) => {
   try {
