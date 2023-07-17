@@ -4,6 +4,10 @@ const { userRouter } = require("./routes/userRoutes");
 const { notesRouter } = require("./routes/notesRoutes");
 const { authMiddleware } = require("./middleware/authentication.middleware");
 require("dotenv").config();
+
+var cors = require("cors");
+
+app.use(cors());
 const app = express();
 
 app.use(express.json());
